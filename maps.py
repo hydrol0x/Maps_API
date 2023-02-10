@@ -35,4 +35,7 @@ def search(query, json=False):
 
 if __name__ == "__main__":
     userPlace = input("Enter Query: ")
-    print([val for val in search(userPlace).values()])
+    try:
+        print(info=[val for val in search(userPlace).values()])
+    except:
+        print("ERR: No places found for this query")
